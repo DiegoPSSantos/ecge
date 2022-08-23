@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="16dp">
+    <ImageView
+        android:id="@+id/headImgMesa"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/label_mesa"
+        android:src="@drawable/mesa"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_nova_mesa"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/btn_entrar"
+        android:layout_alignTop="@+id/headImgMesa"
+        android:layout_toEndOf="@+id/headImgMesa" />
+</RelativeLayout>

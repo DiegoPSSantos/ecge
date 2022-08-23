@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#001C57</color>
+    <color name="primary_dark">#FF001239</color>
+    <color name="primary_light">#CFD8DC</color>
+    <color name="accent">#9E9E9E</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="white">#FFF</color>
+    <color name="white_ice">#ddd9ce</color>
+    <color name="transparent">#00000000</color>
+    <color name="enviado_producao">#ccff90</color>
+    <color name="nao_enviados">#f44336</color>
+    <color name="pedido_conta">#F70000</color>
+    <color name="refresh_progress_1">#33B5E5</color> <!-- AZUL -->
+    <color name="refresh_progress_2">#99CC00</color> <!-- VERDER -->
+    <color name="refresh_progress_3">#CC0000</color> <!-- VERMELHO -->
+    <color name="btn_entrar">#001C57</color>
+    <color name="mint_cream">#F5FFFA</color>
+    <color name="mint_cream_minus">#FAFFFC</color>
+    <color name="fab_nova_mesa">#fd0000</color>
+    <color name="detalhe_mesa">#FE8100</color>
+</resources>

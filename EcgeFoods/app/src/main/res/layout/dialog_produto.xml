@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:context=".fragment.ProdutoDialogFragment">
+
+    <FrameLayout
+        android:id="@+id/flProduto"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp">
+
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:card_view="http://schemas.android.com/tools"
+            android:id="@+id/cvProdutoSelecionado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardElevation="6dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false"
+            app:cardBackgroundColor="@color/primary_text"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="9dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvProdutoSelecionado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="55dp"
+                android:gravity="left"
+                android:padding="10dp"
+                android:ellipsize="end"
+                android:textAllCaps="true"
+                android:textColor="@color/mint_cream"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnExibirObservacoes"
+                android:paddingRight="50dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:src="@drawable/baseline_error_outline_white_36"/>
+
+            <ImageButton
+                android:id="@+id/btnDesfazerSelecao"
+                android:paddingRight="10dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:src="@drawable/baseline_highlight_off_white_36"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefreshProduto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewProduto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@android:color/transparent"
+                android:clipToPadding="false"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flProduto"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnMenos"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gradient"
+            android:src="@drawable/baseline_remove_white_48_2" />
+
+        <EditText
+            android:id="@+id/edtQuantidadeProduto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:inputType="number"
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:layout_margin="6dp"
+            android:text="1"
+            android:background="@color/transparent"
+            android:textAlignment="center" />
+
+        <ImageButton
+            android:id="@+id/btnMais"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gradient"
+            android:src="@drawable/ic_add_black_48dp_00" />
+    </LinearLayout>
+
+    <!--<EditText-->
+        <!--android:id="@+id/edtObservacoesProduto"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="75dp"-->
+        <!--android:layout_below="@+id/llProduto"-->
+        <!--android:padding="15dp"-->
+        <!--android:background="@drawable/line_border"-->
+        <!--android:hint="@string/hint_observacoes"-->
+        <!--android:inputType="textMultiLine"-->
+        <!--android:overScrollMode="always"-->
+        <!--android:scrollbarStyle="insideInset"-->
+        <!--android:scrollbars="vertical" />-->
+
+    <Button
+        android:id="@+id/btnAdicionarProduto"
+        style="?android:textAppearanceSmall"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/llProduto"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_entrar_gradient"
+        android:minHeight="48dp"
+        android:text="@string/adicionar"
+        android:textColor="@color/mint_cream"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnCancelarProduto"
+        style="?android:textAppearanceSmall"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/llProduto"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_entrar_gradient"
+        android:minHeight="48dp"
+        android:text="@string/cancelar"
+        android:textColor="@color/mint_cream"
+        android:textStyle="bold" />
+
+</RelativeLayout>
